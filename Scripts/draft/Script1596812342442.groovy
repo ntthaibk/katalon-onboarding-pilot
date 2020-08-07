@@ -16,34 +16,5 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 
 
-// BAI 1
 
-def a
-
-def b
-
-def Sum(a,b){
-	return a+b
-}
-
-def c=Sum(1,1)
-
-println(c)
-
-def d=Sum(5.0,0.5)
-
-println(d)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//Cach 2

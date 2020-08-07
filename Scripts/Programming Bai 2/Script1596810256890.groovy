@@ -16,33 +16,48 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 
 
-// BAI 1
+
+// BAI 2
 
 def a
 
 def b
 
-def Sum(a,b){
-	return a+b
-}
+def c
 
-def c=Sum(1,1)
+def x1
 
-println(c)
+def x2
 
-def d=Sum(5.0,0.5)
+def QuaEquation(a,b,c){
+	def delta = b*b-4*a*c
+	if (delta<0){
+		println "Pt co nghiem ao"
+	}
+	else
+		if (delta==0){
+			x1=(-b)/(2*a)
+			println "Pt co nghiem kep x1 = x2 = " + x1
+		}
+		else {
+				x1 =(-b-Math.sqrt(delta))/(2*a)
+				x2=(-b+Math.sqrt(delta))/(2*a)
+				println "Pt co nghiem x1 = " + x1
+				println "Pt co nghiem x2 = " + x2
+		}
+		}
 
-println(d)
+def m=QuaEquation(5,6,1)
 
+println m
 
+def n=QuaEquation(1,1,1)
 
+println n
 
+def p=QuaEquation(1,-4,4)
 
-
-
-
-
-
+println p
 
 
 
