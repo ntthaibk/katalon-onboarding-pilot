@@ -19,5 +19,32 @@ import internal.GlobalVariable as GlobalVariable
 
 //Bai 3
 
+def a = "This is"
+ 
+def b = "Katalon"
+
+def c = a + " " + b
+
+println c
+
+//
+def x
+
+def y
+
+def AddString(x,y){
+	return (x+" "+y)
+}
+
+
+def z=AddString("This Is","Katalon")
+
+println z
+
+
+
+
+
+
 
 
