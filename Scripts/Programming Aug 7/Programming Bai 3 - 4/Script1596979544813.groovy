@@ -41,9 +41,9 @@ def z=AddString("This Is","Katalon")
 
 println z
 
+//Bai 4
 
-
-
+println (z [8..14])
 
 
 
