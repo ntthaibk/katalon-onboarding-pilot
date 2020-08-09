@@ -6,6 +6,7 @@
    <UUID>fa2acd90-f915-4cda-a185-612e2a89053f</UUID>
    <migratedVersion>5.9.0</migratedVersion>
    <pageLoadTimeout>0</pageLoadTimeout>
+   <projectFileLocation>/Users/nhihptran/Documents/katalon-onboarding-pilot/KatalonOnboardPilot.prj</projectFileLocation>
    <sourceContent>
       <sourceFolderList>
          <sourceFolderConfiguration>
