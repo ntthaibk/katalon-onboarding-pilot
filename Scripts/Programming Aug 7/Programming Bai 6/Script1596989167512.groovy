@@ -16,43 +16,22 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 
 
+//Bai 6
 
-// BAI 2
+def a = "anh"
 
-def a
+def name
 
-def b
-
-def c
-
-def x1
-
-def x2
-
-def QuaEquation(a,b,c) {
-	def delta = b*b-4*a*c
-	if (delta<0) {
-		println "Pt co nghiem ao"
-	} 
-	else 
-		if (delta==0) {
-		x1=(-b)/(2*a)
-		println "Pt co nghiem kep x1 = x2 = " + x1
-	} 
-		else {
-		x1 =(-b-Math.sqrt(delta))/(2*a)
-		x2=(-b+Math.sqrt(delta))/(2*a)
-		println "Pt co nghiem x1 = " + x1
-		println "Pt co nghiem x2 = " + x2
-	}
+def AddName(a,name){
+	return a+" "+name
 }
 
+def aVu = AddName(a,"Vu")
 
-println QuaEquation(5,6,1)
+println aVu
 
-println QuaEquation(1,1,1)
+println AddName(a,"Uy")
 
-println QuaEquation(1,-4,4)
+println AddName(a,"Dung")
 
-
-
+println AddName(a,"Hai")
