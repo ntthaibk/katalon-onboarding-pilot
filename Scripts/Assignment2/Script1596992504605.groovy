@@ -15,5 +15,26 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 
+def QE(a,b,c){
+	def delta = b*b-4*a*c
+	
+	if(delta > 0){
+		println "Phuong trinh co nghiem x1 = " + (-b-Math.sqrt(delta))/(2*a)
+		println "Phuong trinh co nghiem x2 = " + (-b+Math.sqrt(delta))/(2*a)
+	}	
+		else{	
+			if (delta == 0){
+			
+			println "Phuong trinh co 1 nghiem kep x = " + (-b/(2*a))
+			}
+			else{
+			println "Phuong trinh co nghiem ao"
+			}
+		}
+}
 
+println QE(5,6,1)
 
+println QE(1,-6,9)
+
+println QE(1,1,1)
