@@ -18,6 +18,3 @@ import internal.GlobalVariable as GlobalVariable
 
 import com.katalon.onboarding.Assignment
 
-def result = Assignment.addNumber(1, 3)
-
-println(result)
