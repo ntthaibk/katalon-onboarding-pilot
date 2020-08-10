@@ -15,50 +15,20 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 
+def a = "anh"
 
+def name
 
-// BAI 2
+def AddName(a,name){
+	return a+" "+name
+}
 
-def a
+def aVu = AddName(a,"Vu")
 
-def b
+println aVu
 
-def c
+println AddName(a,"Uy")
 
-def x1
+println AddName(a,"Dung")
 
-def x2
-
-def QuaEquation(a,b,c){
-	def delta = b*b-4*a*c
-	if (delta<0){
-		println "Pt co nghiem ao"
-	}
-	else
-		if (delta==0){
-			x1=(-b)/(2*a)
-			println "Pt co nghiem kep x1 = x2 = " + x1
-		}
-		else {
-				x1 =(-b-Math.sqrt(delta))/(2*a)
-				x2=(-b+Math.sqrt(delta))/(2*a)
-				println "Pt co nghiem x1 = " + x1
-				println "Pt co nghiem x2 = " + x2
-		}
-	}
-
-def m=QuaEquation(5,6,1)
-
-println m
-
-def n=QuaEquation(1,1,1)
-
-println n
-
-def p=QuaEquation(1,-4,4)
-
-println p
-
-
-
-
+println AddName(a,"Hai")
