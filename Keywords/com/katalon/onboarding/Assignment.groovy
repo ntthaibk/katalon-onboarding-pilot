@@ -103,19 +103,10 @@ public class Assignment5 {
 
 //baiTap6: Add "Anh" to given list
 public class Assignment6 {
-	public static void addAnhToList{
-		def List<String> givenList = [Uy, Dung, Hai, Vu]
-		for(givenList ->)
-		{
-			
-			print
+	public static void addAnhToList(){
+		List<String> nameList = ["Uy", "Dung", "Hai", "Vu"]
+		nameList.each{name ->
+			println("Anh " + name)
 		}
 	}
 }
-
-
-
- 
-
-
-
