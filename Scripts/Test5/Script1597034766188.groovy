@@ -15,11 +15,6 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 
-import com.katalon.onboarding.Assignment1
+import com.katalon.onboarding.Assignment5
 
-//1 + 1
-def result1 = Assignment1.addNumber(1, 1)
-println"1 + 1 = " + (result1)
-//5 + 0.5
-def result2 = Assignment1.addNumber(5, 0.5)
-println"5 + 0.5 = " + (result2)
+Assignment5.CalDate()
