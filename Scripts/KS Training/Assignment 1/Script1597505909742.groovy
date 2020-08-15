@@ -14,20 +14,21 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
+import org.openqa.selenium.Keys as Keys
 
+WebUI.openBrowser('')
 
+WebUI.navigateToUrl('https://the-internet.herokuapp.com/')
 
+WebUI.click(findTestObject('Object Repository/Page_The Internet/a_Checkboxes'))
 
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
+WebUI.check(findTestObject('Object Repository/Page_The Internet/input1'))
+
+WebUI.verifyElementChecked(findTestObject('Page_The Internet/input1'), 0)
+
+WebUI.uncheck(findTestObject('Object Repository/Page_The Internet/input2'))
+
+WebUI.verifyElementNotChecked(findTestObject('Page_The Internet/input2'), 0)
+
+WebUI.closeBrowser()
+
