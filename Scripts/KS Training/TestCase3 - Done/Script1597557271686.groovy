@@ -15,16 +15,21 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 
+WebUI.openBrowser(GlobalVariable.url)
 
+not_run: WebUI.waitForPageLoad(9)
 
-def list = ["Uy", "Dung", "Hai", "Vu"]
+WebUI.click(findTestObject('Page_The Internet/a_Dropdown'))
 
-//1
-def addAnh(x){
-	return "anh " + x
-}
+WebUI.click(findTestObject('Page_The Internet/Page_Dropdown/select_Please select an option    Option 1    Option 2'))
 
-println list.collect{addAnh(it)}
+WebUI.selectOptionByLabel(findTestObject('Page_The Internet/Page_Dropdown/select_Please select an option    Option 1    Option 2'), 'Option 2', 
+    false)
 
-//2
-println list.collect{"anh " + it}
+not_run: WebUI.click(findTestObject(null))
+
+WebUI.verifyOptionSelectedByLabel(findTestObject('Page_The Internet/Page_Dropdown/select_Please select an option    Option 1    Option 2'), 
+    'Option 2', false, 0)
+
+WebUI.closeBrowser()
+

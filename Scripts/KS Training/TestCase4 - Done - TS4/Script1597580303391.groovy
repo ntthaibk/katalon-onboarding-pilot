@@ -14,16 +14,29 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
+import org.openqa.selenium.Keys as Keys
 
-def sum(a, b){
-	return a+b
-}
+WebUI.openBrowser(GlobalVariable.url)
 
-//1+1=2
-def c = sum(1,1)
+not_run: WebUI.waitForPageLoad(9)
 
-println c
+WebUI.click(findTestObject('Page_The Internet/a_Frames'))
 
-//5+0.5=5.5
-println sum(5,0.5)
+WebUI.click(findTestObject('Page_The Internet/Page_Frames/a_iFrame'))
+
+WebUI.setText(findTestObject('Page_The Internet/Page_Frames/p_Your content goes here'), userName, FailureHandling.STOP_ON_FAILURE)
+
+WebUI.enableSmartWait()
+
+WebUI.verifyElementText(findTestObject('Page_The Internet/Page_Frames/p_Your content goes here'), userName)
+
+not_run: WebUI.setText(findTestObject('Page_The Internet/Page_Frames/p_Your content goes here'), findTestData('null').getValue(
+        1, 3), FailureHandling.STOP_ON_FAILURE)
+
+not_run: WebUI.setText(findTestObject('Page_The Internet/Page_Frames/p_Your content goes here'), findTestData('null').getValue(
+        1, 4), FailureHandling.STOP_ON_FAILURE)
+
+not_run: WebUI.click(findTestObject(null))
+
+WebUI.closeBrowser()
 

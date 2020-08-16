@@ -14,24 +14,21 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
+import org.openqa.selenium.Keys as Keys
 
-//1
-def today = new Date()
+WebUI.openBrowser(GlobalVariable.url)
 
-def tomorrow = today + 1
+not_run: WebUI.waitForPageLoad(9)
 
-def yesterday = today - 1
+WebUI.click(findTestObject('Page_The Internet/a_Checkboxes'))
 
-println today.format("MM/dd/yyyy")
-println tomorrow.format("MM/dd/yyyy")
-println yesterday.format("MM/dd/yyyy")
+WebUI.click(findTestObject('Page_The Internet/Page_Checkboxes/input1'))
 
+WebUI.click(findTestObject('Page_The Internet/Page_Checkboxes/input2'))
 
-//2
-def date = new Date()
-def nextDate = date.next()
-def previousDate = date.previous()
+WebUI.verifyElementChecked(findTestObject('Page_The Internet/Page_Checkboxes/input1'), 1)
 
-println date.format("MM/dd/yyyy")
-println nextDate.format("MM/dd/yyyy")
-println previousDate.format("MM/dd/yyyy")
+WebUI.verifyElementNotChecked(findTestObject('Page_The Internet/Page_Checkboxes/input2'), 1)
+
+WebUI.closeBrowser()
+
