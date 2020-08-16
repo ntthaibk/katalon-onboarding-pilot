@@ -20,15 +20,11 @@ WebUI.openBrowser('')
 
 WebUI.navigateToUrl('https://the-internet.herokuapp.com/')
 
-WebUI.click(findTestObject('Page_The Internet/Checkboxes/a_Checkboxes'))
+WebUI.click(findTestObject('Object Repository/Page_The Internet/Page_The Internet/a_Dropdown'))
 
-WebUI.check(findTestObject('Page_The Internet/Checkboxes/input1'))
+WebUI.selectOptionByValue(findTestObject('Object Repository/Page_The Internet/Page_The Internet/select_Please select an option    Option 1 _a93200'), 
+    '2', true)
 
-WebUI.verifyElementChecked(findTestObject('Page_The Internet/Checkboxes/input1'), 0)
-
-WebUI.uncheck(findTestObject('Page_The Internet/Checkboxes/input2'))
-
-WebUI.verifyElementNotChecked(findTestObject('Page_The Internet/Checkboxes/input2'), 0)
-
-WebUI.closeBrowser()
+WebUI.verifyOptionSelectedByLabel(findTestObject('Page_The Internet/Page_The Internet/select_Please select an option    Option 1 _a93200'), 
+    'Option 2', false, 0)
 
