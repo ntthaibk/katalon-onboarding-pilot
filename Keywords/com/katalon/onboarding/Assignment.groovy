@@ -31,7 +31,7 @@ public class Assignment1 {
 
 //baiTap2: Solving this Quadratics Equation
 public class Assignment2 {
-	
+
 	public static void QuadraticEquationSolve(float a, float b, float c) {
 		//check if a = 0 or b = 0
 		if (a == 0) {
@@ -43,10 +43,10 @@ public class Assignment2 {
 			}
 			return;
 		}
-		
+
 		//calculate delta
 		def float d = b*b - 4*a*c;
-		
+
 		//solve when a & b <> 0 to find root 1 & 2
 		float x1;
 		float x2;
@@ -68,13 +68,13 @@ public class Assignment2 {
 //baiTap3: Adding 2 Strings together
 public class Assignment3 {
 	def static addString(String a, String b){
-	return a + " " + b
+		return a + " " + b
 	}
 }
 
 //baiTap4: Giving a string and getting a part out of the string
 public class Assignment4 {
-	
+
 	public static void getString(String a, String b){
 		println("Your input string is: " + a)
 		println("Your output string is: " + b)
@@ -98,15 +98,24 @@ public class Assignment5 {
 		//Today - 1
 		def subtractOne = new Date().plus (-1)
 		println("Subtracting = " + subtractOne.format("MM/dd/yyyy"))
-	}	
+	}
 }
 
 //baiTap6: Add "Anh" to given list
 public class Assignment6 {
 	public static void addAnhToList(){
-		List<String> nameList = ["Uy", "Dung", "Hai", "Vu"]
+
+		def nameList = ["Uy", "Dung", "Hai", "Vu"]
+		def newNameList = new ArrayList()
 		nameList.each{name ->
-			println("Anh " + name)
+			newNameList.add("Anh " + name)
 		}
+		println(newNameList)
 	}
 }
+
+//baiTap7:
+public class Assignment7{
+
+}
+

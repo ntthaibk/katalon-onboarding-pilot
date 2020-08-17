@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Task7</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>181e4144-7793-4f8a-86a4-fbef20cd33b0</testCaseGuid>
+   <variable>
+      <defaultValue>0</defaultValue>
+      <description></description>
+      <id>beaae097-dd3f-410f-824f-4adb78550ac9</id>
+      <masked>false</masked>
+      <name>inputSeq</name>
+   </variable>
+</TestCaseEntity>
