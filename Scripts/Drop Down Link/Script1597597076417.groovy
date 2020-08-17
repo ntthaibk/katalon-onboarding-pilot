@@ -1,5 +1,4 @@
 import static com.kms.katalon.core.checkpoint.CheckpointFactory.findCheckpoint
-
 import static com.kms.katalon.core.testcase.TestCaseFactory.findTestCase
 import static com.kms.katalon.core.testdata.TestDataFactory.findTestData
 import static com.kms.katalon.core.testobject.ObjectRepository.findTestObject
@@ -15,6 +14,15 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
+import org.openqa.selenium.Keys as Keys
 
-import com.katalon.onboarding.Assignment
+WebUI.openBrowser('')
+
+WebUI.navigateToUrl('https://the-internet.herokuapp.com/dropdown')
+
+WebUI.selectOptionByValue(findTestObject('Object Repository/Page_The Internet/dropdown_Option 2'), 
+    'Option 2', true)
+
+WebUI.verifyOptionSelectedByLabel(findTestObject('Page_The Internet/dropdown_Option 2'), 
+    'Option 2', false, 30)
 

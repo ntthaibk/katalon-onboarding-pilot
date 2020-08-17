@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Project>
    <description></description>
-   <name>KatalonOnboardPilot</name>
+   <name>Katalon Testing</name>
    <tag></tag>
-   <UUID>fa2acd90-f915-4cda-a185-612e2a89053f</UUID>
+   <UUID>d6dc2ca0-e352-43e9-ba0f-624a67adc171</UUID>
    <migratedVersion>5.9.0</migratedVersion>
    <pageLoadTimeout>0</pageLoadTimeout>
    <sourceContent>
