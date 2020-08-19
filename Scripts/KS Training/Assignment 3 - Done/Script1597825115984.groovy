@@ -13,18 +13,19 @@ import com.kms.katalon.core.testobject.TestObject as TestObject
 import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
-import company.katalon.onboarding.DragAndDropHelper as DragAndDropHelper
 import internal.GlobalVariable as GlobalVariable
-import org.junit.After as After
 import org.openqa.selenium.Keys as Keys
 
 WebUI.openBrowser('')
 
 WebUI.navigateToUrl('https://the-internet.herokuapp.com/')
 
-WebUI.click(findTestObject('Object Repository/Page_The Internet/Page_The Internet/a_Drag and Drop'))
+WebUI.click(findTestObject('Object Repository/Page_The Internet/Page_The Internet/Page_The Internet/a_Dropdown'))
 
-DragAndDropHelper dragAndDrop = new DragAndDropHelper()
+WebUI.selectOptionByValue(findTestObject('Object Repository/Page_The Internet/Page_The Internet/Page_The Internet/select_Please select an option    Option 1 _a93200'), 
+    '2', true)
 
-dragAndDrop.dragAndDrop(findTestObject('Object Repository/Page_The Internet/Page_The Internet/div_A'), findTestObject('Object Repository/Page_The Internet/Page_The Internet/div_B'))
+WebUI.verifyTextPresent('Option 2', false)
+
+WebUI.closeBrowser()
 

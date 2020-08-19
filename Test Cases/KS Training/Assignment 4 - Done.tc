@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>Assignment 4 - Done</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>43411c14-4bf5-47be-8874-a4c86218a44e</testCaseGuid>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>f1346c37-ed00-4f4f-b44d-0532531f4a80</id>
+      <masked>false</masked>
+      <name>input</name>
+   </variable>
+</TestCaseEntity>

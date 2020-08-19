@@ -14,17 +14,8 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
-import org.openqa.selenium.Keys as Keys
 
-WebUI.openBrowser('')
+WebUI.openBrowser('https://the-internet.herokuapp.com/upload')
 
-WebUI.navigateToUrl('https://the-internet.herokuapp.com/')
-
-WebUI.click(findTestObject('Object Repository/Page_The Internet/Page_The Internet/a_Dropdown'))
-
-WebUI.selectOptionByValue(findTestObject('Object Repository/Page_The Internet/Page_The Internet/select_Please select an option    Option 1 _a93200'), 
-    '2', true)
-
-WebUI.verifyOptionSelectedByLabel(findTestObject('Page_The Internet/Page_The Internet/select_Please select an option    Option 1 _a93200'), 
-    'Option 2', false, 0)
+WebUI.uploadFile(findTestObject(null), '')
 
