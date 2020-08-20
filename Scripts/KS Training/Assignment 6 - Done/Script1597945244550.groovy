@@ -14,24 +14,39 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
+import org.openqa.selenium.Keys as Keys
+
+WebUI.openBrowser('https://the-internet.herokuapp.com/horizontal_slider')
+
+WebUI.sendKeys(findTestObject('Page_The Internet/Page_The Internet/Slider'), Keys.chord(Keys.ARROW_RIGHT, Keys.ARROW_RIGHT, 
+        Keys.ARROW_RIGHT))
+
+WebUI.verifyTextPresent('1.5', false)
+
+WebUI.sendKeys(findTestObject('Page_The Internet/Page_The Internet/Slider'), Keys.chord(Keys.ARROW_RIGHT, Keys.ARROW_RIGHT,
+	Keys.ARROW_RIGHT,Keys.ARROW_RIGHT, Keys.ARROW_RIGHT))
+
+WebUI.verifyTextPresent('4', false)
+
+WebUI.sendKeys(findTestObject('Page_The Internet/Page_The Internet/Slider'), Keys.chord(Keys.ARROW_RIGHT, Keys.ARROW_RIGHT))
+
+WebUI.verifyTextPresent('5', false)
+
+WebUI.sendKeys(findTestObject('Page_The Internet/Page_The Internet/Slider'), Keys.chord(Keys.ARROW_LEFT, Keys.ARROW_LEFT,
+	Keys.ARROW_LEFT, Keys.ARROW_LEFT))
+
+WebUI.verifyTextPresent('3', false)
+
+WebUI.sendKeys(findTestObject('Page_The Internet/Page_The Internet/Slider'), Keys.chord(Keys.ARROW_LEFT, Keys.ARROW_LEFT,
+	Keys.ARROW_LEFT, Keys.ARROW_LEFT, Keys.ARROW_LEFT, Keys.ARROW_LEFT))
+
+WebUI.verifyTextPresent('0', false)
 
 
-//Bai 6
 
-def a = "anh"
 
-def name
 
-def AddName(a,name){
-	return a+" "+name
-}
 
-def aVu = AddName(a,"Vu")
 
-println aVu
 
-println AddName(a,"Uy")
 
-println AddName(a,"Dung")
-
-println AddName(a,"Hai")

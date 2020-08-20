@@ -17,5 +17,9 @@ import internal.GlobalVariable as GlobalVariable
 
 WebUI.openBrowser('https://the-internet.herokuapp.com/upload')
 
-WebUI.uploadFile(findTestObject(null), '')
+WebUI.uploadFile(findTestObject('Page_The Internet/Page_The Internet/btn_ChooseFile'), '/Users/ngoctrinh/Downloads/A5 - Trang 1.pdf')
+
+WebUI.click(findTestObject('Page_The Internet/Page_The Internet/btn_upload'))
+
+WebUI.verifyTextPresent('File Uploaded!', false)
 

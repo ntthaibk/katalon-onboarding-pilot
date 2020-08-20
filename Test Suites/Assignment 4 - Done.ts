@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestSuiteEntity>
    <description></description>
-   <name>Assignment 4 -TS</name>
+   <name>Assignment 4 - Done</name>
    <tag></tag>
    <isRerun>false</isRerun>
    <mailRecipient></mailRecipient>
@@ -15,7 +15,7 @@
       <guid>e9d8a2ba-18a8-43ac-95bf-d087d86c0463</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/KS Training/Assignment 4 - Done</testCaseId>
+      <testCaseId>Test Cases/KS Training/Assignment 4</testCaseId>
       <testDataLink>
          <combinationType>ONE</combinationType>
          <id>7361cf01-f01e-49fb-a488-abb40e16a7fb</id>

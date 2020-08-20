@@ -15,6 +15,8 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 
+
+
 def today = new Date()
 
 println today.format('MM/dd/yy')
@@ -22,3 +24,5 @@ println today.format('MM/dd/yy')
 println yesterday = today.plus(1).format('MM/dd/yy')
 
 println tomorrow = today.minus(1).format('MM/dd/yy')
+
+
