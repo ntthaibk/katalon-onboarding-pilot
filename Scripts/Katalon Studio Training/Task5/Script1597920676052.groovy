@@ -14,4 +14,23 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
+import org.openqa.selenium.Keys as Keys
+import java.nio.file.Path as Path
+import java.nio.file.Paths as Paths
+import com.kms.katalon.core.configuration.RunConfiguration as RunConfiguration
 
+WebUI.openBrowser('')
+
+WebUI.navigateToUrl('https://the-internet.herokuapp.com/upload')
+
+//WebUI.click(findTestObject('Page_The Internet/div_File Uploader_drag-drop-upload'))
+
+WebUI.uploadFile(findTestObject('Page_The Internet/UploaderXpath'), '/Users/ancao/Downloads/DemoDataToDrive.xlsx')
+
+WebUI.delay(3)
+
+WebUI.click(findTestObject('Page_The Internet/input_File Uploader_file-submit'))
+
+WebUI.verifyElementPresent(findTestObject('Page_The Internet/h3_File Uploaded'), 3)
+
+WebUI.closeBrowser()

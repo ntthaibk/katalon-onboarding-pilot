@@ -14,5 +14,20 @@ import com.kms.katalon.core.webservice.keyword.WSBuiltInKeywords as WS
 import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
+import org.junit.After as After
 import org.openqa.selenium.Keys as Keys
+import org.openqa.selenium.WebDriver as WebDriver
+import com.katalon.onboarding.DragAndDropHelper as DragAndDropHelper
+
+WebUI.openBrowser('https://the-internet.herokuapp.com/')
+
+WebUI.click(findTestObject('Page_The Internet/a_Drag and Drop'))
+
+DragAndDropHelper.dragAndDrop(findTestObject('Object Repository/Page_The Internet/div_A'), findTestObject('Object Repository/Page_The Internet/div_B'))
+
+WebUI.delay(5)
+
+WebUI.verifyElementAttributeValue(findTestObject('Object Repository/Page_The Internet/div_B'), 'id', 'column-a', 5, FailureHandling.STOP_ON_FAILURE)
+
+WebUI.closeBrowser()
 
